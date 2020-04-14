@@ -1,0 +1,16 @@
+@import "../../styles.scss";
+
+.title{
+    color: $color-primary;
+}
+
+.diveder-line{
+    border-bottom: solid 5px $color-primary !important;
+}
+
+.contact-btn{
+    padding: 10px 20px;
+    background-color: $color-primary2;
+    color: $color-title;
+    font-size: 23px;
+}

@@ -1,0 +1,103 @@
+.card{
+    border-color: #efefef;
+
+    &-header{
+        background-color: #f9f9f9;
+        border-color: #f0f0f0;
+        border-top: solid 1px #f0f0f0;
+    }
+
+    &-footer{
+        background-color: #ffffff;
+        border-color: #f0f0f0;
+    }
+}
+
+// navbar
+.navbar{
+    position: fixed !important;
+    width: 100% !important;
+    z-index: 99;
+    background-color: $color-primary;
+
+    .navbar-brand{
+        color: $color-title;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .navbar-toggler{
+        background-color: $color-primary2;
+        border: solid 1px;
+        
+        @media only screen and (min-width: 1024px) {
+            width: 100%;
+            display: none;
+        }
+
+        .navbar-toggler-icon{
+            color: white !important;
+        }
+    }
+
+    .navbar-nav{
+        @media only screen and (min-width: 1024px) {
+            display: flex !important;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+        }
+    }
+    .navbar-right{
+        padding: 20px;
+    }
+    
+    .nav{
+        position: relative;
+
+        @include mobile-screen {
+            width: 100%;
+            display: none;
+        }
+    
+        @media only screen and (min-width: 768px) {
+            width: 100% !important;
+            display: none;
+        }
+    
+        @media only screen and (max-width: 1024px) {
+            display: none;
+        }
+
+        .nav-link{
+            color: $color-title !important;
+            font-weight: 700;
+            margin: 0px 10px;
+            margin: 0px 20px;
+
+            @include mobile-screen {
+                margin-left: -20px !important;
+                position: relative;
+            } 
+
+            @media only screen and (min-width: 768px) {
+                margin-left: -20px !important;
+                position: relative;
+            } 
+        }
+    }
+}
+// and navbar
+
+
+// form bootstrap
+.form-group{
+    border-bottom: solid 1px #dfe6e9;
+    padding: 20px 0px;
+
+    .form-control{
+        border: none !important;
+        font-size: 25px;
+        padding: 0 !important;
+    }
+}

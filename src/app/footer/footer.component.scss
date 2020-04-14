@@ -1,0 +1,45 @@
+@import "../../styles.scss";
+
+.item-footer{
+    
+    .icon-footer{
+        color: $color-title;
+        border: solid 1px;
+        padding: 13px 15px;
+        margin: 0px 10px;
+        font-size: 20px;
+        @include border-radius($radius: 50px);
+
+        i{
+            font-size: 25px;
+            margin-top: -20px !important;
+        }
+    }
+    
+    .btn-footer{
+        color: #bdc3c7;
+        font-size: 20px;
+        padding: 0px !important;
+    }
+
+    #icon-facebook{
+        padding: 13px 20px !important;
+    }
+    
+    @include mobile-screen {
+        margin-top: 50px !important;
+    }
+
+    @media only screen and (min-width: 768px) {
+        margin-top: 50px !important;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        margin-top: 20px;
+    }
+}
+
+.footer{
+    background-color: #1a252f;
+    padding:20px 0px 10px 0px;
+}

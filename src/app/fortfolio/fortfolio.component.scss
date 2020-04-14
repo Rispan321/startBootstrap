@@ -1,0 +1,29 @@
+@import "../../styles.scss";
+
+.diveder-line{
+    border-bottom: solid 5px $color-primary !important;
+}
+
+.title{
+    color: $color-primary;
+    font-size: 50px;
+}
+
+.item-fortfolio{
+    z-index: 1;
+}
+
+.img-fortfolio{
+    @include border-radius($radius: 10px);
+}
+
+.display-hover{
+    @include border-radius($radius: 10px);
+    background-color: red;
+    position: absolute;
+    top: 0;
+    z-index: 3s;
+    width: 92%;
+    height: 100%;
+    display: none;
+}

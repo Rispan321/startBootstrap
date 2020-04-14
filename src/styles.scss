@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+// css variabel
+// ====================
+@import "./assets/scss/variable.scss";
+
+// typigrafy
+// ====================
+@import "./assets/scss/css3-mixins.scss";
+
+// typigrafy
+// ====================
+@import "./assets/scss/typography.scss";
+
+// css variabel
+// ====================
+@import "~bootstrap-scss/bootstrap";
+
+// global style
+@import "./assets/scss/global.scss";
+
+// typigrafy
+// ====================
+@import "./assets/scss/bootstrap/card.scss";

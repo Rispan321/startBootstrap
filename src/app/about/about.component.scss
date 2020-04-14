@@ -1,0 +1,22 @@
+@import "../../styles.scss";
+
+.title{
+    color: $color-title;
+}
+
+.text-about{
+    color: $color-title;
+}
+
+.diveder-line{
+    border-bottom: solid  $color-title;
+}
+
+.about-btn{
+    @include border-radius($radius: 10px);
+    border: solid 3px $color-title;
+    color: $color-title;
+    padding: 15px 30px;
+    font-size: 20px;
+    display: table;
+}
