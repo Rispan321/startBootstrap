@@ -1,3 +1,5 @@
+/*card
+=========================*/
 .card{
     border-color: #efefef;
 
@@ -11,9 +13,10 @@
         background-color: #ffffff;
         border-color: #f0f0f0;
     }
-}
+} 
 
-// navbar
+/* navbar
+==========================*/
 .navbar{
     position: fixed !important;
     width: 100% !important;
@@ -24,6 +27,10 @@
         color: $color-title;
         font-weight: 700;
         font-size: 30px;
+
+        @include mobile-screen {
+            font-size: 20px;
+        }
     }
 
     .navbar-toggler{
@@ -87,10 +94,9 @@
         }
     }
 }
-// and navbar
 
-
-// form bootstrap
+/* form bootstrap 
+=======================*/
 .form-group{
     border-bottom: solid 1px #dfe6e9;
     padding: 20px 0px;

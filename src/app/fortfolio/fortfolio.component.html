@@ -1,39 +1,61 @@
 <section class="text-center">
-  <div class="container">
-    <h1 class="title">FORTFOLIO</h1>
-    <div class="d-flex justify-content-center m-3">
-      <div class="diveder-line m-2"></div>
-      <div class="diveder-icon m-2">
-        <img src="../../assets/image/star2.png" alt="" width="40">
-      </div>
-      <div class="diveder-line m-2"></div>
-    </div>
-    <div class="row mt-5">
-      <div class="col-md-6 col-lg-4 mt-4">
-        <div class="item-fortfolio">
-          <a href="#" class="img-fortfolio">
-            <img src="../../assets/image/img-fortfolio1.png" alt="" width="100%">
-          </a>
-          <div class="display-hover">
-            <img src="../../assets/image/add.png" alt="" width="50">
-          </div>
-		    </div>
-      </div>
-      <div class="col-md-6 col-lg-4 mt-4">
-        <img src="../../assets/image/img-fortfolio2.png" alt="" width="100%" class="img-fortfolio">
-      </div>
-      <div class="col-md-6 col-lg-4 mt-4">
-        <img src="../../assets/image/img-fortfolio3.png" alt="" width="100%" class="img-fortfolio">
-      </div>
-      <div class="col-md-6 col-lg-4 mt-4">
-        <img src="../../assets/image/img-fortfolio4.png" alt="" width="100%" class="img-fortfolio">
-      </div>
-      <div class="col-md-6 col-lg-4 mt-4">
-        <img src="../../assets/image/img-fortfolio5.png" alt="" width="100%" class="img-fortfolio">
-      </div>
-      <div class="col-md-6 col-lg-4 mt-4">
-        <img src="../../assets/image/img-fortfolio6.png" alt="" width="100%" class="img-fortfolio">
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<h1 class="title">FORTFOLIO</h1>
+		<!-- border diveder -->
+		<div class="d-flex justify-content-center m-3">
+			<div class="diveder-line m-2"></div>
+			<div class="diveder-icon m-2">
+				<img src="../../assets/image/star2.png" alt="" width="40">
+			</div>
+			<div class="diveder-line m-2"></div>
+		</div><!-- and border --> 
+		<div class="row mt-5">
+			<!-- item fortfolio -->
+			<div class="col-md-6 col-lg-4 mt-4" *ngFor="let data of dataModal">
+				<div class="img-fortfolio">
+					<!-- img item -->
+					<a href="#" class="img">
+						<div class="display-hover" (click)="selectItem(data)">
+							<img src="../../assets/image/add.png" alt="" width="100">
+						</div>
+						<img id="myImg" src="{{data.img}}" alt="Snow" style="width:100%;">
+					</a> <!-- and item img -->
+				</div>
+			</div> <!-- item fortfolio -->
+		</div>
+	</div>
 </section>
+
+<!-- Modal fortfolio img item -->
+<div class="modal fade example-modal-lg" id="portfolio-modal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content text-center">
+			<!-- Modal Header -->
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+	
+			<!-- Modal body -->
+			<div class="modal-body">
+
+				<h1 class="modal-title text-center w-100" style="color: #333333;">{{selectedItem?.title}}</h1>
+				<!-- border diveder -->
+				<div class="d-flex justify-content-center mb-5">
+					<div class="diveder-line m-2"></div>
+					<div class="diveder-icon m-2">
+						<img src="../../assets/image/star2.png" alt="" width="40">
+					</div>
+					<div class="diveder-line m-2"></div>
+				</div><!-- and border --> 
+
+				<img src="{{selectedItem?.img}}" alt="" class="w-75">
+				<p class="mt-5 text-modal">{{selectedItem?.textModal}}</p>
+			</div>
+	
+			<!-- Modal footer -->
+			<div class="modal-footer m-auto" is="close"> 
+				<button type="button" class="btn btn-link mb-4" (click)="modalHide()">&times; Close</button>
+			</div>
+		</div>
+	</div>
+</div> <!-- modal fortfolio -->
